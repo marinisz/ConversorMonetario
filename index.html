@@ -13,7 +13,7 @@
 <body>
     <section>
         <div class="titulo">
-            <h1>CONVERSOR</h1>
+            <h1>CONVERSOR - APROXIMADO</h1>
         </div>
         <form action="" id="formulario">
             <label for="real">Valor em Real:</label>
@@ -21,24 +21,48 @@
             <label for="moeda">Moeda:</label>
             <select name="moeda" id="moeda">
                 <option value="">Selecione</option>
-                <option value="euro">Euro</option>
-                <option value="dolar">Dolar</option>
-                <option value="libra">Libras</option>
+                <option value="Euros">Euro</option>
+                <option value="Dolares">Dolar</option>
+                <option value="Libras">Libras</option>
             </select>
             <input type="submit" value="Calcular" id="butao">
         </form>
-        <div class="resultado">
-            <h1>X Real = X MOEDA</h1>
+        <div id="resultado">
+            
         </div>
     </section>
 </body>
 <script>
     var formulario = document.getElementById('formulario')
-    formulario.addEventListener("",function(){
+    formulario.addEventListener("submit",function(e){
+    e.preventDefault();
     var real = document.getElementById('real').value;
     var tipo = document.getElementById('moeda').value;
-    if(tipo=='euro'){
-        alert("euro")
+    if(real==0){
+        alert('Digite um Valor!')
+    }
+    if(tipo=='Euros'){
+        var resultado = document.getElementById('resultado');
+        var valor = real/6.44
+        resultado.innerHTML = `
+        <h1>${real} Reais = ${Math.round(valor)} ${tipo}</h1>
+        `
+    }
+    else if(tipo=='Dolares'){
+        var resultado = document.getElementById('resultado');
+        var valor = real/5.32
+        resultado.innerHTML = `
+        <h1>${real} Reais = ${Math.round(valor)} ${tipo}</h1>
+        `
+    }
+    else if(tipo=='Libras'){
+        var resultado = document.getElementById('resultado');
+        var valor = real/7.27
+        resultado.innerHTML = `
+        <h1>${real} Reais = ${Math.round(valor)} ${tipo}</h1>
+        `
+    }else{
+        alert("Escolha uma moeda")
     }
     })
 </script>
