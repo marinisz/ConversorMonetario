@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon-16x16.png" />
+
+</head>
+
+<body>
+    <section>
+        <div class="titulo">
+            <h1>CONVERSOR</h1>
+        </div>
+        <form action="" id="formulario">
+            <label for="real">Valor em Real:</label>
+            <input type="number" id="real" name="real">
+            <label for="moeda">Moeda:</label>
+            <select name="moeda" id="moeda">
+                <option value="">Selecione</option>
+                <option value="euro">Euro</option>
+                <option value="dolar">Dolar</option>
+                <option value="libra">Libras</option>
+            </select>
+            <input type="submit" value="Calcular" id="butao">
+        </form>
+        <div class="resultado">
+            <h1>X Real = X MOEDA</h1>
+        </div>
+    </section>
+</body>
+<script>
+    var formulario = document.getElementById('formulario')
+    formulario.addEventListener("",function(){
+    var real = document.getElementById('real').value;
+    var tipo = document.getElementById('moeda').value;
+    if(tipo=='euro'){
+        alert("euro")
+    }
+    })
+</script>
+</html>

@@ -1,0 +1,47 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 10vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+section{
+    background-color: grey;
+    color: white;
+    margin-top: 40%;
+    height: 50vh;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.resultado{
+    margin-top: 40px;
+    display: flex;
+}
+div.resultado img{
+    margin-right: 10px;
+}
+input#real{
+    border-radius: 10px;
+    height: 5vh;
+    width: 5vw;
+}
+select#moeda{
+    border-radius: 10px;
+    height: 5vh;
+    width: 8vw;
+}
+label{
+    font-size: 20px;
+}
+input#butao{
+    background-color: chocolate;
+    height: 5vh;
+    width: 5vw;
+    border-radius: 10pc;
+}
